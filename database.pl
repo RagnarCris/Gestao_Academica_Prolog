@@ -87,9 +87,10 @@ curso_disciplina('DCC','DCC005',40,'DCC_DCC005') .
 curso_disciplina('DCC','DCC006',40,'DCC_DCC006') .
 curso_disciplina('DCC','DCC007',40,'DCC_DCC007') .
 curso_disciplina('DCC','DCC008',40,'DCC_DCC008') .
+curso_disciplina('DCC','MAT001',15,'DCC_MAT001') .
 
 curso_disciplina('MAT','MAT001',30,'MAT_MAT001') .
-curso_disciplina('DCC','MAT001',15,'DCC_MAT001') .
+
 curso_disciplina('MAT','MAT002',30,'MAT_MAT002') .
 curso_disciplina('DCC','MAT002',15,'DCC_MAT002') .
 curso_disciplina('MAT','MAT003',30,'MAT_MAT003') .
