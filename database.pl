@@ -56,46 +56,45 @@ disciplina('Cálculo III', 'MAT004') .
 disciplina('Equações Diferenciais Ordinárias', 'MAT005') .
 
 /* Definição dos relacionamentos entre estudante e disciplina, os parâmetros são, respectivamente, matrícula, código da disciplina, turma e nota */
-estudante_disciplina('201625013', 'DCC001', 'DCC_DCC001', 85) .
-estudante_disciplina('201635029', 'DCC001', 'DCC_DCC001', 95) .
-estudante_disciplina('201635003', 'DCC001', 'DCC_DCC001', 95) .
-estudante_disciplina('201635022', 'DCC001', 'DCC_DCC001', 90) .
-estudante_disciplina('201635019', 'DCC001', 'DCC_DCC001', 92) .
-estudante_disciplina('201635013', 'DCC001', 'DCC_DCC001', 95) .
-estudante_disciplina('201835023', 'DCC001', 'DCC_DCC001', 98) .
-estudante_disciplina('201325013', 'DCC001', 'DCC_DCC001', 90) .
-estudante_disciplina('201235007', 'DCC001', 'DCC_DCC001', 92) .
-estudante_disciplina('201425040', 'DCC001', 'DCC_DCC001', 91) .
+estudante_disciplina('201625013', 'DCC001', 'A', 85) .
+estudante_disciplina('201635029', 'DCC001', 'A', 95) .
+estudante_disciplina('201635003', 'DCC001', 'A', 95) .
+estudante_disciplina('201635022', 'DCC001', 'A', 90) .
+estudante_disciplina('201635019', 'DCC001', 'A', 92) .
+estudante_disciplina('201635013', 'DCC001', 'A', 95) .
+estudante_disciplina('201835023', 'DCC001', 'A', 98) .
+estudante_disciplina('201325013', 'DCC001', 'A', 90) .
+estudante_disciplina('201235007', 'DCC001', 'A', 92) .
+estudante_disciplina('201425040', 'DCC001', 'A', 91) .
 
-estudante_disciplina('201922042', 'MAT002', 'MAT_MAT002', 85) .
-estudante_disciplina('201612013', 'MAT002', 'MAT_MAT002', 87) .
-estudante_disciplina('201612018', 'MAT002', 'MAT_MAT002', 77) .
-estudante_disciplina('201822027', 'MAT002', 'MAT_MAT002', 90) .
-estudante_disciplina('202012011', 'MAT002', 'MAT_MAT002', 97) .
-estudante_disciplina('201622013', 'MAT002', 'MAT_MAT002', 65) .
-estudante_disciplina('201612015', 'MAT002', 'MAT_MAT002', 75) .
-estudante_disciplina('201622021', 'MAT002', 'MAT_MAT002', 86) .
-estudante_disciplina('201612006', 'MAT002', 'MAT_MAT002', 85) .
-estudante_disciplina('201612001', 'MAT002', 'MAT_MAT002', 92) .
+estudante_disciplina('201612013', 'MAT002', 'A', 87) .
+estudante_disciplina('201612018', 'MAT002', 'A', 77) .
+estudante_disciplina('201922042', 'MAT002', 'A', 85) .
+estudante_disciplina('201822027', 'MAT002', 'A', 90) .
+estudante_disciplina('202012011', 'MAT002', 'A', 97) .
+estudante_disciplina('201622013', 'MAT002', 'A', 65) .
+estudante_disciplina('201612015', 'MAT002', 'A', 75) .
+estudante_disciplina('201622021', 'MAT002', 'A', 86) .
+estudante_disciplina('201612006', 'MAT002', 'A', 85) .
+estudante_disciplina('201612001', 'MAT002', 'A', 92) .
 
 /* Definição dos relacionamentos entre disciplina e curso, os parâmetros são, respectivamente, código do curso, código da disciplina, quantidade de vagas separadas na disciplina para tal curso e turma */
-curso_disciplina('DCC','DCC001',40,'DCC_DCC001') .
-curso_disciplina('DCC','DCC002',40,'DCC_DCC002') .
-curso_disciplina('DCC','DCC003',40,'DCC_DCC003') .
-curso_disciplina('DCC','DCC004',40,'DCC_DCC004') .
-curso_disciplina('DCC','DCC005',40,'DCC_DCC005') .
-curso_disciplina('DCC','DCC006',40,'DCC_DCC006') .
-curso_disciplina('DCC','DCC007',40,'DCC_DCC007') .
-curso_disciplina('DCC','DCC008',40,'DCC_DCC008') .
-curso_disciplina('DCC','MAT001',15,'DCC_MAT001') .
+curso_disciplina('DCC','DCC001',40,'A') .
+curso_disciplina('DCC','DCC002',40,'A') .
+curso_disciplina('DCC','DCC003',40,'A') .
+curso_disciplina('DCC','DCC004',40,'A') .
+curso_disciplina('DCC','DCC005',40,'A') .
+curso_disciplina('DCC','DCC006',40,'A') .
+curso_disciplina('DCC','DCC007',40,'A') .
+curso_disciplina('DCC','DCC008',40,'A') .
 
-curso_disciplina('MAT','MAT001',30,'MAT_MAT001') .
-
-curso_disciplina('MAT','MAT002',30,'MAT_MAT002') .
-curso_disciplina('DCC','MAT002',15,'DCC_MAT002') .
-curso_disciplina('MAT','MAT003',30,'MAT_MAT003') .
-curso_disciplina('DCC','MAT003',15,'DCC_MAT003') .
-curso_disciplina('MAT','MAT004',30,'MAT_MAT004') .
-curso_disciplina('DCC','MAT004',15,'DCC_MAT004') .
-curso_disciplina('MAT','MAT005',30,'MAT_MAT005') .
-curso_disciplina('DCC','MAT005',15,'DCC_MAT005') .
+curso_disciplina('MAT','MAT001',30,'A') .
+curso_disciplina('DCC','MAT001',15,'A') .
+curso_disciplina('MAT','MAT002',30,'A') .
+curso_disciplina('DCC','MAT002',15,'A') .
+curso_disciplina('MAT','MAT003',30,'A') .
+curso_disciplina('DCC','MAT003',15,'A') .
+curso_disciplina('MAT','MAT004',30,'A') .
+curso_disciplina('DCC','MAT004',15,'A') .
+curso_disciplina('MAT','MAT005',30,'A') .
+curso_disciplina('DCC','MAT005',15,'A') .
