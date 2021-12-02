@@ -5,7 +5,45 @@ Autor: Lucas Piazzi de Castro
 Matrícula: 201635003
 */
 
-:- include('database.pl') .
+:- include('estudante_db.pl') .
+:- include('curso_db.pl') .
+:- include('disciplina_db.pl') .
+:- include('estudante_disciplina_db.pl') .
+:- include('curso_disciplina_db.pl') .
+
+/* Definição de dinamicidade para os predicados*/
+:- dynamic(estudante/3) .
+:- dynamic(curso/2) .
+:- dynamic(disciplina/2) .
+:- dynamic(estudante_disciplina/4) .
+:- dynamic(curso_disciplina/4) .
+
+salvar() :- save_estudante(), save_curso(), save_disciplina(), save_estudante_disciplina(), save_curso_disciplina() .
+
+save_estudante() :-
+   open('estudante_db.pl',write,Stream),
+   with_output_to(Stream, listing(estudante/3)),
+   close(Stream).
+   
+save_curso() :-
+   open('curso_db.pl',write,Stream),
+   with_output_to(Stream, listing(curso/2)),
+   close(Stream).
+   
+save_disciplina() :-
+   open('disciplina_db.pl',write,Stream),
+   with_output_to(Stream, listing(disciplina/2)),
+   close(Stream).
+   
+save_estudante_disciplina() :-
+   open('estudante_disciplina_db.pl',write,Stream),
+   with_output_to(Stream, listing(estudante_disciplina/4)),
+   close(Stream).
+   
+save_curso_disciplina() :-
+   open('curso_disciplina_db.pl',write,Stream),
+   with_output_to(Stream, listing(curso_disciplina/4)),
+   close(Stream).
 
 /* Predicados para pegar o nome da disciplina de acordo com curso e estudante */
 nome_disciplina(Matricula, Disciplina, Nota) :- estudante_disciplina(Matricula, Cod_Disciplina, _, Nota), disciplina(Disciplina, Cod_Disciplina) .
@@ -49,5 +87,5 @@ estudante_ira(Nome, Curso, Ira) :- estudante(Nome,Matricula,Curso), estudante_di
 estudante_nota_disciplina(Nome, Curso, Nota, Disciplina) :- estudante(Nome,Matricula,Curso), estudante_disciplina(Matricula, Disciplina, _, Nota). 
 
 estudantes_por_curso(Curso, Lista) :- findall(Nome, estudante(Nome,_,Curso), Lista) .
-estudantes_por_curso(Curso, NotaMinima, Disciplina, Success) :- findall([Nome,Nota], estudante_nota_disciplina(Nome,Curso,Nota,Disciplina), Lista), include(verifica_nota(NotaMinima),Lista, Success) . .
+estudantes_por_curso(Curso, NotaMinima, Disciplina, Success) :- findall([Nome,Nota], estudante_nota_disciplina(Nome,Curso,Nota,Disciplina), Lista), include(verifica_nota(NotaMinima),Lista, Success) .
 estudantes_por_curso(Curso, IraMinimo, Success) :- findall([Nome,Ira], estudante_ira(Nome,Curso,Ira), Lista), include(verifica_nota(IraMinimo),Lista, Success) .
